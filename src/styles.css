@@ -1,0 +1,179 @@
+h1 {
+  text-align: center;
+  font-size: "Roboto";
+  font-weight: 800;
+  color: #292b31;
+  margin: auto auto 35px;
+  letter-spacing: -1px;
+  font-size: 50px;
+}
+
+body {
+  background: #f0e8f2;
+}
+
+.height {
+  height: 20vh;
+}
+
+.form {
+  position: relative;
+}
+
+.form span {
+  position: absolute;
+  right: 8px;
+  top: 13px;
+  padding-left: 7px;
+  border-left: 1px solid #d1d5db;
+}
+
+.search-icon i {
+  padding: 5px;
+}
+
+.search-icon i:hover {
+  cursor: pointer;
+}
+
+.form-input {
+  height: 55px;
+  text-indent: 10px;
+  border-radius: 10px;
+}
+
+.form-input:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.wednesday-wt {
+  float: left;
+  margin: 5px 40px auto 20px;
+}
+
+.wed-temp {
+  font-size: 64px;
+  font-family: "Roboto";
+  font-weight: 600;
+  letter-spacing: -6px;
+  margin: 10px auto 0;
+}
+
+.units {
+  font-size: 20px;
+  font-family: "Roboto";
+  letter-spacing: 0px;
+  position: relative;
+  top: -33px;
+}
+
+.wed-details {
+  font-size: 13px;
+  font-family: "Roboto";
+  line-height: 100%;
+}
+
+.wed-details-2 {
+  font-size: 16px;
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 100%;
+  margin: 20px auto auto 20px;
+}
+.wed-date {
+  font-size: 11px;
+  font-family: "Roboto";
+  font-weight: normal;
+}
+
+.day {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 60%;
+}
+
+.day span {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.weather-icon {
+  display: block;
+  margin: 0 auto 20px;
+  filter: drop-shadow(6px 6px 19px rgba(133, 133, 133, 0.4));
+}
+
+.max-temp {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 100%;
+}
+
+.min-temp {
+  font-weight: 300;
+}
+#card-wed {
+  border: none;
+  border-radius: 20px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(226, 99, 230) 0%,
+    rgb(82, 99, 240) 100.2%
+  );
+  color: white;
+}
+
+#card-days {
+  border: none;
+  border-radius: 15px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 9px rgba(151, 151, 151, 0.3);
+}
+
+.fa-solid {
+  color: #5263f0;
+  margin-right: 14px;
+}
+
+.form {
+  font: "Roboto";
+}
+
+#celsius-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+#fahrenheit-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.submit-btn {
+  background-color: transparent;
+  border: none;
+}
+
+#description {
+  text-decoration: capitalize;
+}
+
+#current-location-button {
+  font: "Roboto";
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  top: -12px;
+  color: grey;
+  background-color: white;
+  font-size: 15px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/c50ee9aae7.js" crossorigin="anonymous"></script>  
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+  <body>
+    <div class="container">
+    <div class="row d-flex height justify-content-center align-items-center">
+
+      <div class="col-md-6">
+
+        <div class="form">
+          <form id="search-form">
+            <input type="text" class="form-control form-input" placeholder="Search your city..." id="search-city">
+            <button class="submit-btn" type="submit"><span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span></button>
+          </form>
+        </div>
+      </div>
+      <div class="col-3">
+        <button
+        
+          id="current-location-button"
+        >
+          Locate me
+        </button>
+      </div>
+    </div>
+  </div>
+    
+  <div class="container">
+<h1 id=city></h1>
+<div class="row">
+<div class="col-lg-4">
+<div class="card" id="card-wed">
+  <div class="card-body">
+    <img src="img/cloudy.png" alt="cloudy-icon" width="40%" class="wednesday-wt">
+    <p><span class="wed-temp" id="wed-temp">19</span><span class="units">
+      <a href="#" id="celsius-link">°C</a> |
+      <a href="#" id="fahrenheit-link">°F</a>
+    </p>
+    <p class="wed-details">Precipitation: <span id=precipitation></span>% <br />Humidity: <span id=humidity></span>% <br />Wind: <span id=wind></span> km/h</p>
+    <p class="wed-details-2">
+      <span id=description></span><br /><span class="wed-date"></span></p>
+  </div>
+</div>
+</div>
+<div class="col"><div class="card" id="card-days">
+  <div class="card-body">
+    <p class="day">Thu<br /><span class="day-2">31 Aug</span></p>
+    <img src="img/rain.png" alt="rain-icon" width="68%" class="weather-icon">
+    <p class="max-temp">20°C <br /> <span class="min-temp">13°C</span>
+    </p>
+  </div></div></div>
+<div class="col"><div class="card" id="card-days">
+  <div class="card-body">
+    <p class="day">Fri<br /><span class="day-2">1 Sept</span></p>
+    <img src="img/cloudy.png" alt="cloudy-icon" width="68%" class="weather-icon">
+    <p class="max-temp">22°C <br /> <span class="min-temp">14°C</span>
+    </p>
+  </div></div></div>
+<div class="col"><div class="card" id="card-days">
+  <div class="card-body">
+    <p class="day">Sat<br /><span class="day-2">2 Sept</span></p>
+    <img src="img/sun.png" alt="sun-icon" width="68%" class="weather-icon">
+    <p class="max-temp">26°C <br /> <span class="min-temp">19°C</span>
+    </p>
+  </div></div></div>
+<div class="col"><div class="card" id="card-days">
+  <div class="card-body">
+    <p class="day">Sun<br /><span class="day-2">3 Sept</span></p>
+    <img src="img/sun.png" alt="sun-icon" width="68%" class="weather-icon">
+    <p class="max-temp">29°C <br /> <span class="min-temp">20°C</span>
+    </p>
+  </div></div></div>
+<div class="col"><div class="card" id="card-days">
+  <div class="card-body">
+    <p class="day">Mon<br /><span class="day-2">4 Sept</span></p>
+    <img src="img/cloudy.png" alt="cloudy-icon" width="68%" class="weather-icon">
+    <p class="max-temp">28°C <br /> <span class="min-temp">20°C</span>
+    </p>
+  </div></div></div>
+</div>
+<script src="src/index.js" type="module"></script>  </body>
+</html>
