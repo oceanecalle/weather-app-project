@@ -42,10 +42,7 @@ function formattedDate(date) {
   return `${currentWeekday}, ${currentDate} ${currentMonth} ${currentHours}:${currentMinutes}`;
 }
 
-let celsiusTemperature = null;
-
 function showWeather(response) {
-  celsiusTemperature = Math.round(response.data.main.temp);
   document.querySelector(
     "#city"
   ).innerHTML = `<i class="fa-solid fa-map-pin"></i> ${response.data.name}`;
@@ -53,12 +50,7 @@ function showWeather(response) {
     response.data.main.temp
   );
 
-  if (response.data.rain) {
-    document.querySelector("#precipitation").innerHTML =
-      response.data.rain * 100;
-  } else {
-    document.querySelector("#precipitation").innerHTML = 0;
-  }
+  document.querySelector("#precipitation").innerHTML = response.data.rain * 100;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -94,13 +86,13 @@ function getCurrentLocation(event) {
 function fahrenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#wed-temp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature * 1.8 + 32);
+  temperatureElement.innerHTML = Math.round(response.data.main.temp) * 1.8 + 32;
 }
 
 function celsiusTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#wed-temp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
 }
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");

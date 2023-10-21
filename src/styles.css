@@ -162,7 +162,7 @@ body {
 }
 
 #description {
-  text-transform: capitalize;
+  text-decoration: capitalize;
 }
 
 #current-location-button {
