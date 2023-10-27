@@ -44,6 +44,39 @@ function formattedDate(date) {
 
 let celsiusTemperature = null;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast1");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col"><div class="card" id="card-days">
+  <div class="card-body" id="forecast1">
+    <p class="day">${day}<br /></p>
+    <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"/>
+    <p class="max-temp">20°C <br /> <span class="min-temp">13°C</span>
+    </p>
+  </div></div></div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showWeather(response) {
   celsiusTemperature = Math.round(response.data.main.temp);
   document.querySelector(
@@ -65,13 +98,16 @@ function showWeather(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
-  let iconElement = document.querySelector("#icon");
+  let iconElement = document.querySelector("#first-day-icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  getForecast(response.data.coord);
 }
+
+displayForecast();
 
 function searchCity(city) {
   let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
