@@ -99,10 +99,11 @@ body {
   font-weight: normal;
 }
 
-.weather-icon {
+#icon {
   display: block;
   margin: 0 auto 20px;
   filter: drop-shadow(6px 6px 19px rgba(133, 133, 133, 0.4));
+  border: #5263f0;
 }
 
 .max-temp {
