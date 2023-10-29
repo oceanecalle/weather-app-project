@@ -1,5 +1,3 @@
-// let fahrenheit = Math.round((temperature*1.8)+32);
-
 function formattedDate(date) {
   let currentHours = date.getHours();
   if (currentHours < 10) {
@@ -41,8 +39,6 @@ function formattedDate(date) {
 
   return `${currentWeekday}, ${currentDate} ${currentMonth} ${currentHours}:${currentMinutes}`;
 }
-
-let celsiusTemperature = null;
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -146,24 +142,6 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-
-function fahrenheitTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#wed-temp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature * 1.8 + 32);
-}
-
-function celsiusTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#wed-temp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", fahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", celsiusTemp);
 
 let wedDate = document.querySelector(".wed-date");
 let currentTime = new Date();
